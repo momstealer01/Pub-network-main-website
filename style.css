@@ -13,6 +13,7 @@
 }
 
 .nav_container {
+    background-color: #1F2937;
     display: flex;
     padding: 16px;
     justify-content: space-between;
@@ -101,8 +102,14 @@ a {
     gap: 16px;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 32px;
 }
 .about_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     background: #ffffff;
     padding: 3rem 2rem;
     border-radius: 24px;
@@ -115,7 +122,13 @@ a {
 
 }
 .about_card:hover {
-    border-color: rgba(113, 2, 2, 0.6); /* matches your button color */
+    border-color: rgba(113, 2, 2, 0.6);
+}
+.about_links{
+  background-color: #710202;
+    padding: 8px 16px; 
+    border-radius: 5px;
+    width: fit-content;
 }
 
 .image_icon{
@@ -123,7 +136,24 @@ a {
     max-height: 75px;
     border-radius: 50%;
 }
-
+.disclaimer{
+    background-color: #e5e7eb;
+}
+.disclaimer_content{
+    text-align: center;
+    padding: 16px;
+}
+.disclaimer_title{
+    font-size: 36px;
+    color: #1F2937;
+    font-weight: 300;
+    margin: 16px;
+}
+.footer_bottom{
+    text-align: center;
+    padding: 8px;
+    color: #e5e7eb;
+}
 @media (max-width: 900px) {
     .hero_container {
         justify-content: start;
