@@ -1,77 +1,121 @@
-*{
+* {
     padding: 0;
     margin: 0;
-    box-sizing: border-boxcd;
+    box-sizing: border-box;
+}
+.header{ background-image: url("../Pub-network-main-website/img/");
+    background-size: cover;        /* fills header */
+    background-position: center;   /* keeps focus */
+    background-repeat: no-repeat;}
+.header,
+.footer {
+    background-color: #1F2937;
 }
 
-.header{ 
-
-}
-.nav_container{
+.nav_container {
     display: flex;
     padding: 16px;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
-.logo{
+
+.logo {
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 24px;
     color: #f9faf8;
-
 }
-.logo_img{
+
+.logo_img {
     border-radius: 50%;
 }
-ul{
+
+ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     gap: 16px;
     margin-left: auto;
 }
-.header, .footer{
-    background-color:#1F2937 ;
-}
-.header_links{
-    
-}
 
-a{
+a {
     text-decoration: none;
     color: #e5e7eb;
     font-size: 18px;
 }
-.hero_main_text{
-    font-size: 36px;
-    color: #f9faf8;
+
+.hero_container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 64px 16px; 
+    gap: 32px; 
+    flex-wrap: wrap; 
+    text-align: center;
 }
-.hero_text_container{
-    
+
+.hero_text_container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 32px;
+    max-width: 500px; 
 }
-.hero_container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 16px;
-    
+
+.hero_main_text {
+    font-size: 36px;
+    color: #f9faf8;
 }
-.placeholder_image {
-  border-radius: 20px;
-  margin-bottom: 25px;
-}
-.hero_subtext{
+
+.hero_subtext {
     font-size: 18px;
     color: #e5e7eb;
 }
-.join_button{
+
+.placeholder_image {
+    border-radius: 20px;
+    margin-bottom: 25px;
+    max-width: 100%; 
+    height: auto;
+}
+
+.join_button {
     background-color: #3882f6;
-    padding: 5px;
+    padding: 8px 16px; 
     border-radius: 5px;
-    align-items: center;
+    width: fit-content;
+}
+
+@media (max-width: 900px) {
+    .hero_container {
+        justify-content: start;
+        text-align: center;
+    }
+
+    .hero_text_container {
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav_container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    ul {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero_main_text {
+        font-size: 28px;
+    }
+
+    .hero_subtext {
+        font-size: 16px;
+    }
 }
