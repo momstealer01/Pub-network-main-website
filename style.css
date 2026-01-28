@@ -64,7 +64,7 @@ a {
     flex-direction: column;
     justify-content: space-around;
     gap: 32px;
-    max-width: 500px; 
+    height: 400px; 
 }
 
 .hero_main_text {
@@ -122,8 +122,7 @@ a {
 
 }
 .about_card:hover {
-    border-color: rgba(113, 2, 2, 0.6);
-}
+    border-color: #710202;}
 .about_links{
   background-color: #710202;
     padding: 8px 16px; 
