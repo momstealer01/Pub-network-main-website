@@ -7,16 +7,29 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #d1577c;
 }
 div{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 16px;
 }
 img{
     border-radius: 5%;
+    background-color: aliceblue;
+    padding: 10px;
 }
 h1{
     text-align: center;
+    color: aliceblue;
+}
+a{
+    background-color: #710202;
+    padding: 8px 16px; 
+    border-radius: 5px;
+    width: fit-content;
+    text-decoration: none;
+    color: aliceblue;
 }
