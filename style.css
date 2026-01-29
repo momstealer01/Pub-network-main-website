@@ -6,7 +6,9 @@
 .header{ background-image: url("../Pub-network-main-website/img/");
     background-size: cover;
     background-position: center;
-        background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+    padding-top: 90px;
+}
 .header,
 .footer {
     background-color: #1F2937;
@@ -14,14 +16,16 @@
 nav {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .nav_container {
     background-color: #1F2937;
     display: flex;
-    padding: 16px;
+    padding: 12px 20px;
+    margin: auto;
+    max-width: 1200px;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
@@ -30,29 +34,46 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 24px;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 600;
     color: #f9faf8;
 }
 
 .logo_img {
     border-radius: 50%;
-    max-width: 50px;
-    max-height: 50px;
+    max-width: 42px;
+    max-height: 42px;
 }
 
 ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: 16px;
+    gap: 20px;
     margin-left: auto;
 }
 
 a {
     text-decoration: none;
     color: #e5e7eb;
-    font-size: 18px;
+    font-size: 16px;
+    transition: color 0.2s ease;
+    position: relative;
+}
+a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #710202;
+    transition: width 0.25s ease;
+}
+a:hover::after{
+    width: 100%;
+    color: #ffffff;
 }
 
 .hero_container {
@@ -70,7 +91,8 @@ a {
     flex-direction: column;
     justify-content: space-around;
     gap: 32px;
-    height: 400px; 
+    min-height: 400px; 
+    height: auto;
 }
 
 .hero_main_text {
@@ -191,14 +213,29 @@ a {
 
 @media (max-width: 600px) {
     .nav_container {
+        padding: 10px 14px;
         flex-direction: column;
         gap: 12px;
     }
+    .logo{
+        font-size: 18px;
+    }
+    .logo_img{
+        max-width: 36px;
+        max-height: 36px;
+    }
+    .header {
+        padding-top: 130px;
+    }
 
     ul {
+        gap: 12px;
         margin-left: 0;
         flex-direction: column;
         align-items: center;
+    }
+    a{
+        font-size: 14px;
     }
 
     .hero_main_text {
